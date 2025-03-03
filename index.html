@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Train Ticket Booking Demo</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <h1 id="siteLogo">Train Booking</h1>
+      </div>
+      <div class="navbar-right">
+        <!-- ปุ่มสลับภาษา -->
+        <button id="btnTH">TH</button>
+        <button id="btnEN">EN</button>
+        <!-- ปุ่มสลับโหมดกลางคืน -->
+        <button id="btnDarkMode">Dark Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- เมนูนำทาง -->
+    <nav>
+      <ul>
+        <li id="menuHome">หน้าแรก</li>
+        <li id="menuLogin">เข้าสู่ระบบ</li>
+        <li id="menuSearch">ค้นหาตั๋วรถไฟ</li>
+        <li id="menuPayment">ชำระเงิน</li>
+        <li id="menuHistory">ประวัติการจอง</li>
+        <li id="menuUser">ข้อมูลผู้ใช้</li>
+      </ul>
+    </nav>
+
+    <!-- หน้าแรก -->
+    <section id="homeSection" class="active">
+      <h2 id="homeTitle">ยินดีต้อนรับสู่ระบบจองตั๋วรถไฟ</h2>
+      <p id="homeDesc">โปรดเข้าสู่ระบบเพื่อใช้งาน หรือเลือกดูแนะนำตั๋วและรายการตั๋วจากสถานีต่างๆ</p>
+      <!-- แนะนำตั๋ว -->
+      <div class="recommended-section">
+        <h3 id="recommended">แนะนำตั๋วและโปรโมชัน</h3>
+        <div id="recommendedContainer" class="recommended-cards">
+          <!-- แสดงการ์ดแนะนำตั๋ว -->
+        </div>
+      </div>
+      <!-- รายการตั๋ว -->
+      <div class="tickets-section">
+        <h3 id="ticket">ตั๋วรถไฟสำหรับสถานีต่างๆ</h3>
+        <div id="ticketsListing">
+          <!-- ตารางรายการตั๋ว -->
+        </div>
+      </div>
+    </section>
+
+    <!-- หน้าเข้าสู่ระบบ -->
+    <section id="loginSection">
+      <h2 id="loginTitle">เข้าสู่ระบบ</h2>
+      <div class="login-form">
+        <label id="labelUsername" for="username">ชื่อผู้ใช้ (Username)</label>
+        <input type="text" id="username" placeholder="กรอกชื่อผู้ใช้" />
+        <label id="labelPassword" for="password">รหัสผ่าน (Password)</label>
+        <input type="password" id="password" placeholder="กรอกรหัสผ่าน" />
+        <button id="btnLogin">ล็อกอิน</button>
+        <div class="login-error" id="loginError"></div>
+      </div>
+    </section>
+
+    <!-- หน้าค้นหาตั๋ว -->
+    <section id="searchSection">
+      <h2 id="searchTitle">ค้นหาตั๋วรถไฟ</h2>
+      <form class="search-form" id="searchForm">
+        <div>
+          <label id="labelFrom" for="searchFrom">ต้นทาง</label>
+          <select id="searchFrom">
+            <option value="" id="departure_station">-- เลือกต้นทาง --</option>
+            <option value="Bangkok" id="Bangkok">Bangkok</option>
+            <option value="Chiang Mai" id="ChiangMai">Chiang Mai</option>
+            <option value="Korat" id="Korat">Korat</option>
+          </select>
+        </div>
+        <div>
+          <label id="labelTo" for="searchTo">ปลายทาง</label>
+          <select id="searchTo">
+            <option value="" id="arrival_station">-- เลือกปลายทาง --</option>
+            <option value="Bangkok" id="Bangkok">Bangkok</option>
+            <option value="Chiang Mai" id="ChiangMai">Chiang Mai</option>
+            <option value="Korat" id="Korat">Korat</option>
+          </select>
+        </div>
+        <div>
+          <label id="labelDateSearch" for="searchDate">วันที่เดินทาง</label>
+          <input type="date" id="searchDate" />
+        </div>
+        <button type="submit" id="btnSearchTickets">ค้นหา</button>
+      </form>
+      <div id="searchResult"></div>
+    </section>
+
+    <!-- หน้าเลือกที่นั่ง -->
+    <section id="seatSelectionSection">
+      <h2 id="seatSelectionTitle">เลือกที่นั่ง</h2>
+      <div id="seatTrainInfo"></div>
+      <!-- แสดงคำอธิบายที่นั่ง -->
+      <div class="legend">
+        <span class="legend-item normal"></span><span class="legend-label">ที่นั่งปกติ</span>
+        <span class="legend-item disabled"></span><span class="legend-label">ที่นั่งสำหรับผู้พิการ</span>
+        <span class="legend-item elder"></span><span class="legend-label">ที่นั่งสำหรับผู้สูงอายุ</span>
+        <span class="legend-item selected"></span><span class="legend-label">ที่นั่งที่เลือก</span>
+        <span class="legend-item occupied"></span><span class="legend-label">ที่นั่งถูกจองแล้ว</span>
+      </div>
+      <div id="seatMap"></div>
+      <p id="selectedSeatsInfo">ยังไม่ได้เลือกที่นั่ง</p>
+      <button id="btnConfirmSeats">ยืนยันการเลือกที่นั่ง</button>
+    </section>
+
+    <!-- หน้าชำระเงิน -->
+    <section id="paymentSection">
+      <h2 id="paymentTitle">ชำระเงิน</h2>
+      <div id="paymentInfo"></div>
+      <form class="payment-form" id="paymentForm">
+        <label id="labelPaymentMethod" for="paymentMethod">ช่องทางชำระเงิน</label>
+        <select id="paymentMethod">
+          <option value="" id="method">-- เลือกช่องทาง --</option>
+          <option value="creditCard">บัตรเครดิต/เดบิต</option>
+          <option value="bankTransfer">โอนผ่านธนาคาร</option>
+          <option value="promptPay">พร้อมเพย์</option>
+        </select>
+        <label id="labelPaymentDetails" for="paymentDetails">รายละเอียดการชำระเงิน</label>
+        <input type="text" id="paymentDetails" placeholder="กรอกรายละเอียด เช่น เลขบัตร, เลขบัญชี" />
+        <button type="submit" id="btnConfirmPayment">ยืนยันการชำระเงิน</button>
+      </form>
+      <div id="paymentResult"></div>
+    </section>
+
+    <!-- หน้าแสดงข้อมูลผู้ใช้ -->
+    <section id="userSection">
+      <h2 id="userProfileTitle">ข้อมูลผู้ใช้</h2>
+      <div id="userProfileContent">
+        <p id="userNameDisplay"></p>
+      </div>
+    </section>
+
+    <!-- หน้า ประวัติการจอง -->
+    <section id="historySection">
+      <h2 id="historyTitle">ประวัติการจอง</h2>
+      <div class="history-list" id="historyList"></div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p id="footerText">© 2025 TrainBooking. All Rights Reserved.</p>
+  </footer>
+  <script src="src/main.js"></script>
+</body>
+</html>

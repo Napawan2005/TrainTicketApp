@@ -1,0 +1,363 @@
+/* updated-styles.css */
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Prompt', sans-serif;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-height: 400px;
+}
+
+/* Header / Navbar */
+header {
+  background-color: #1e3c72;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-right button {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.navbar-right button:hover {
+  background-color: #2a5298;
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  
+}
+
+nav ul li {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none!important;
+  transition: background 0.3s;
+}
+
+nav ul li:hover {
+  background-color: #eaeaea;
+}
+
+/* Sections */
+section {
+  display: none;
+  margin-top: 20px;
+}
+
+section.active {
+  display: block;
+}
+nav a{
+  text-transform: none;
+  color: #121212;
+}
+
+/* Home Section */
+#homeSection h2,
+#homeSection p {
+  text-align: center;
+}
+
+.recommended-section,
+.tickets-section {
+  margin-bottom: 40px;
+}
+
+.recommended-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h4 {
+  margin: 0 0 10px;
+  color: #1e3c72;
+}
+
+.card-content p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.tickets-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.tickets-table th,
+.tickets-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.tickets-table th {
+  background-color: #f0f0f0;
+}
+
+/* Forms */
+.login-form,
+.payment-form,
+.search-form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.login-form label,
+.payment-form label,
+.search-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.payment-form select,
+.payment-form input[type="text"],
+.search-form select,
+.search-form input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button,
+.payment-form button,
+.search-form button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: #1e3c72;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover,
+.payment-form button:hover,
+.search-form button:hover {
+  background: #2a5298;
+}
+
+.login-error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Seat Selection */
+.legend {
+  margin-bottom: 10px;
+}
+
+.legend-item {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  vertical-align: middle;
+  border: 1px solid #000;
+}
+
+.legend-label {
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.legend-item.normal {
+  background-color: #ccc;
+}
+
+.legend-item.disabled {
+  background-color: #87CEEB;
+}
+
+.legend-item.elder {
+  background-color: #f4a460;
+}
+
+.legend-item.selected {
+  background-color: #32CD32;
+}
+
+.legend-item.occupied {
+  background-color: #666;
+}
+
+.seat-table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #ccc;
+  color: #000;
+}
+
+.seat.disabled {
+  background-color: #87CEEB;
+}
+
+.seat.elder {
+  background-color: #f4a460;
+}
+
+.seat.occupied {
+  background-color: #666;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.seat.selected {
+  background-color: #32CD32 !important;
+}
+
+#selectedSeatsInfo ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 5px 0;
+}
+
+#selectedSeatsInfo li {
+  margin: 3px 0;
+}
+
+/* History */
+.history-list {
+  margin-top: 10px;
+}
+
+.history-item {
+  background: #fafafa;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #1e3c72;
+}
+
+.history-item p {
+  margin: 5px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #1e3c72;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .container {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+}
+
+.dark-mode header,
+.dark-mode footer,
+.dark-mode nav ul li:hover {
+  background-color: #000;
+}
+
+.dark-mode .navbar-container,
+.dark-mode nav ul li {
+  color: #e0e0e0;
+}
+
+.dark-mode .tickets-table th {
+  background-color: #333;
+}
+
+.dark-mode .seat {
+  background-color: #444;
+  color: #e0e0e0;
+}
+
+.dark-mode .seat.selected {
+  background-color: #008000 !important;
+}
+
+.dark-mode .seat.occupied {
+  background-color: #555;
+}
+
+.dark-mode .card {
+  background: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+}
+
+.dark-mode .card-content h4 {
+  color: #e0e0e0;
+}
