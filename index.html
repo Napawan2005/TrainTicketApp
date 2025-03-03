@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="src/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Header -->
@@ -38,6 +38,7 @@
         <li id="menuPayment">ชำระเงิน</li>
         <li id="menuHistory">ประวัติการจอง</li>
         <li id="menuUser">ข้อมูลผู้ใช้</li>
+        <li id="adminSection">Admin</li>
       </ul>
     </nav>
 
@@ -156,10 +157,40 @@
     </section>
   </div>
 
+  <!-- Admin Section: Add New Train -->
+<section id="adminSection" class="admin-panel">
+  <h2>Admin Panel - Manage Trains</h2>
+  <div class="admin-form">
+    <label for="adminFrom">From:</label>
+    <input type="text" id="adminFrom" placeholder="Enter departure">
+    
+    <label for="adminTo">To:</label>
+    <input type="text" id="adminTo" placeholder="Enter destination">
+    
+    <label for="adminDate">Date:</label>
+    <input type="date" id="adminDate">
+    
+    <label for="adminTime">Time:</label>
+    <input type="time" id="adminTime">
+    
+    <label for="adminSeats">Seats Available:</label>
+    <input type="number" id="adminSeats" min="1" placeholder="Number of seats">
+    
+    <button id="btnAddTrain">Add Train</button>
+  </div>
+</section>
+
+<!-- Train Listings -->
+<section id="trainListingSection">
+  <h2>Available Trains</h2>
+  <div id="ticketsListing"></div>
+</section>
+
+
   <!-- Footer -->
   <footer>
     <p id="footerText">© 2025 TrainBooking. All Rights Reserved.</p>
   </footer>
-  <script src="src/main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
