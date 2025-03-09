@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เลือกที่นั่ง</title>
+    <link rel="stylesheet" href="/CSS/SeatSelection.css">
+</head>
+<body>
+    <!-- ====================== Header ====================== -->
+    <header class="navheader">
+        <div class="navtop-left">
+            <p>Go to Heaven</p>
+        </div>
+        <div class="right-section">
+            <nav class="navtop-right">
+                <ul>
+                    <li><a href="#">Home page</a></li>
+                    <li><a href="#">Purchase History</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="change-TH">ไทย</a>
+            <button class="login-button">Login</button>
+        </div>
+    </header>
+
+    <!-- ====================== Seat Selection Section ====================== -->
+    <section id="seatSelectionSection">
+        <h2 id="seatSelectionTitle">เลือกที่นั่ง</h2>
+        <!-- แสดงข้อมูลขบวนรถไฟที่เลือก -->
+        <div id="seatTrainInfo"></div>
+
+        <!-- Legend อธิบายประเภทที่นั่ง -->
+        <div class="legend">
+            <span class="legend-item normal"></span><span class="legend-label">ที่นั่งปกติ</span>
+            <span class="legend-item disabled"></span><span class="legend-label">ที่นั่งสำหรับผู้พิการ</span>
+            <span class="legend-item elder"></span><span class="legend-label">ที่นั่งสำหรับผู้สูงอายุ</span>
+            <span class="legend-item selected"></span><span class="legend-label">ที่นั่งที่เลือก</span>
+            <span class="legend-item occupied"></span><span class="legend-label">ที่นั่งถูกจองแล้ว</span>
+        </div>
+
+        <!-- พื้นที่แสดงแผนผังที่นั่ง -->
+        <div id="seatMap"></div>
+
+        <!-- แสดงข้อมูลที่นั่งที่เลือก -->
+        <div id="selectedSeatsInfo"></div>
+
+        <!-- ปุ่มยืนยันการเลือกที่นั่ง -->
+        <button id="btnConfirmSeats">ยืนยันการเลือกที่นั่ง</button>
+    </section>
+
+    <script src="/JAVASCRIPT/SeatSelection.js"></script>
+</body>
+</html>

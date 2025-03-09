@@ -1,0 +1,176 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+
+/* ตั้งค่า body และ main */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eaeaea, #3e66b2);
+}
+
+/* main ครอบทุกอย่าง */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ====================== Header ====================== */
+.navheader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(179, 173, 232);
+  position: fixed; /* ให้ header อยู่ด้านบนตลอด */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navtop-left {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  text-shadow: 2px 2px 5px black; /* เงาของตัวอักษรเป็นสีดำ */
+  padding: 10px 20px; /* ปรับ padding เพื่อให้กรอบมีขนาดเหมาะสม */
+  font-weight: bold;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 50px;
+}
+
+.login-button {
+  background-color: rgb(221, 78, 1);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.change-TH {
+  background-color: rgb(46, 39, 39);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.navtop-right ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navtop-right ul li a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(54, 41, 165);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.navtop-right ul li a:hover,
+.login-button:hover {
+  opacity: 1;
+}
+
+/* ====================== Login Form ====================== */
+.login-container {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  margin-top: 120px; /* ป้องกันการชนกับ Header */
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e3c72;
+}
+
+.login-form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background: #1e3c72;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease-in;
+}
+
+.login-form button:hover {
+  background: #2a5298;
+  transform: scale(1.02);
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.register-link a {
+  color: #1e3c72;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  color: #ffc107;
+}
+
+
+/*<!-- ====================== footer ====================== --> */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+  font-size: 0.9em;
+  color: #000000;
+}

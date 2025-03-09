@@ -1,0 +1,165 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+
+/* ตั้งค่า body และ main */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eaeaea, #3e66b2);
+}
+
+/* main ครอบทุกอย่าง */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ====================== Header ====================== */
+.navheader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(179, 173, 232);
+  position: fixed; /* ให้ header อยู่ด้านบนตลอด */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navtop-left {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  text-shadow: 2px 2px 5px black; /* เงาของตัวอักษรเป็นสีดำ */
+  padding: 10px 20px; /* ปรับ padding เพื่อให้กรอบมีขนาดเหมาะสม */
+  font-weight: bold;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 50px;
+}
+
+.login-button {
+  background-color: rgb(221, 78, 1);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.change-TH {
+  background-color: rgb(46, 39, 39);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.navtop-right ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navtop-right ul li a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(22, 5, 167);
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.navtop-right ul li a:hover,
+.login-button:hover {
+  opacity: 1;
+}
+
+/* ====================== Payment State ====================== */
+.payment-state {
+  background-color: white;
+  width: 29%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* ระยะห่างระหว่างแต่ละองค์ประกอบ */
+  margin-top: 100px;
+}
+
+.payment-state img {
+  width: 80%; /* ขยายขนาด QR Code */
+  max-width: 300px; /* จำกัดขนาดสูงสุด */
+  height: auto;
+  border: 2px solid #1e3c72;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* ปุ่ม */
+.payment-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.payment-buttons a {
+  flex: 1; /* ให้ปุ่มขยายตามพื้นที่ */
+  margin: 0 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* ปุ่มย้อนกลับ */
+.back-button {
+  background-color: #d9534f; /* สีแดง */
+  color: white;
+}
+
+.back-button:hover {
+  background-color: #c9302c;
+}
+
+/* ปุ่มไปต่อ */
+.next-button {
+  background-color: #5cb85c; /* สีเขียว */
+  color: white;
+}
+
+.next-button:hover {
+  background-color: #4cae4c;
+}

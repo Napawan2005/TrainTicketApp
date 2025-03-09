@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/Login.css">
+    <title>Login</title>
+</head>
+<body>
+    <main> <!-- ใช้ main ครอบ header และ login -->
+      <!-- ====================== Header ====================== -->
+      <header class="navheader">
+        <div class="navtop-left">
+          <p>Go to Heaven</p>
+        </div>
+        <div class="right-section">
+          <nav class="navtop-right">
+            <ul>
+              <li><a href="#">Home page</a></li>
+              <li><a href="#">Purchase History</a></li>
+            </ul>
+          </nav>
+          <a href="#" class="change-TH">ไทย</a>
+          <button class="login-button">Login</button>
+        </div>
+      </header>
+
+      <!-- ====================== Login ====================== -->
+      <div class="login-container">
+          <form class="login-form">
+            <h2>เข้าสู่ระบบ</h2>
+      
+            <label for="username">ชื่อผู้ใช้</label>
+            <input type="text" id="username" placeholder="กรอกชื่อผู้ใช้" required>
+      
+            <label for="password">รหัสผ่าน</label>
+            <input type="password" id="password" placeholder="กรอกรหัสผ่าน" required>
+            <button type="submit">ล็อกอิน</button>
+  
+            <p class="register-link">ยังไม่มีบัญชี? <a href="#">สมัครสมาชิก</a></p>
+          </form>
+        </div>
+        <!-- ====================== footer ====================== -->
+        <div class="footer-bottom">
+            <p id="footerCopyright">© 2025 TrainBooking. All Rights Reserved.</p>
+          </div>
+    </main>
+  </body>
+</html>

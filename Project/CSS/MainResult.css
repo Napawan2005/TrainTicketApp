@@ -1,0 +1,144 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Prompt", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* ====================== Header ====================== */
+.navheader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(179, 173, 232);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 80px;
+}
+
+.navtop-left {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-shadow: 2px 2px 5px black;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 50px;
+}
+
+.login-button {
+    background-color: rgb(221, 78, 1);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.8;
+}
+
+.change-TH {
+    background-color: rgb(46, 39, 39);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.navtop-right ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navtop-right ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(54, 41, 165);
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.5s;
+    opacity: 0.8;
+}
+
+.navtop-right ul li a:hover,
+.login-button:hover {
+    opacity: 1;
+}
+
+/* ====================== Result Section ====================== */
+.navfirst {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    background-image: url("/IMG/Go_to_heaven.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+}
+
+.navfirst-inside {
+    background-color: white;
+    padding: 30px;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    width: 90%;
+}
+
+/* สไตล์ตาราง */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
